@@ -6,7 +6,8 @@ namespace Day04
     {
         static void Main(string[] args)
         {
-
+            Sample.TestPrint();
         }
+        
     }
 }
