@@ -100,11 +100,16 @@ namespace Day05
                     {
                         Console.WriteLine("List contains no values!");
                     }
+                   
                     for (int i = 0; i < values.Count; i++)
                     {
                         Console.WriteLine("Value [" + i + "] is " + values[i]);
 
                     }
+                }
+                else if(choice == "Exit")
+                {
+                    break;
                 }
             }
         }
