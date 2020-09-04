@@ -10,10 +10,10 @@ namespace Day05
             String choice = Console.ReadLine();
 
             Console.Write("Choose number: ");
-            double a = Convert.ToInt32(Console.ReadLine());
+            double a = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Choose number: ");
-            double b = Convert.ToInt32(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
 
             if(choice == "sum")
             {

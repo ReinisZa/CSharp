@@ -8,23 +8,23 @@ namespace Day05
     {
         public static double Sum(double a, double b)
         {
-            double sum = a + b;
-            return sum;
+            //double sum = a + b;
+            return a + b;
         }
         public static double Sub(double a, double b)
         {
-            double sum = a - b;
-            return sum;
+            //double sum = a - b;
+            return a - b;
         }
         public static double Time(double a, double b)
         {
-            double sum = a * b;
-            return sum;
+            //double sum = a * b;
+            return a * b;
         }
         public static double Div(double a, double b)
         {
-            double sum = a / b;
-            return sum;
+            //double sum = a / b;
+            return a / b;
         }
     }
 }
