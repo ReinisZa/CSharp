@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Day05
 {
@@ -78,9 +80,10 @@ namespace Day05
         static void Task02(List <String> values)
         {
             String choice = "";
+            int max = values.Count;
             while(choice != "Exit")
             {
-                Console.Write("Choose an action - Add, Show, Exit: ");
+                Console.Write("Choose an action - Add, Show, Exit, Remove: ");
                 choice = Console.ReadLine();
 
                 if (choice == "Add")
@@ -110,6 +113,20 @@ namespace Day05
                 else if(choice == "Exit")
                 {
                     break;
+                }
+                else if(choice == "Remove")
+                {
+                    Console.WriteLine("Which index would you like to remove? : ");
+                    int remove = 0;
+                    try
+                    { 
+                        remove = Convert.ToInt32(Console.ReadLine());
+                        values.RemoveAt(remove);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Wrong input");
+                    }
                 }
             }
         }
