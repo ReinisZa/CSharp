@@ -6,8 +6,8 @@ namespace Day06Tasks
 {
     class Students
     {
-        public String Name;
-        public String Surname;
+        public String Name { get; set; }
+        public String Surname { get; set; }
         private int _course;
         public int Course
         {
@@ -29,6 +29,19 @@ namespace Day06Tasks
                 }
 
             }
+        }
+
+        public Students()
+        {
+            Console.Write("Enter name: ");
+            String name = Console.ReadLine();
+            Name = name;
+            Console.Write("Enter surname: ");
+            String surname = Console.ReadLine();
+            Surname = surname;
+            Console.Write("Enter Course: ");
+            int course = Convert.ToInt32(Console.ReadLine());
+            Course = course;
         }
 
         public void PrintInfo()
