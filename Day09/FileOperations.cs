@@ -44,5 +44,42 @@ namespace Day08FileIO
                 Console.WriteLine("Failed to write!");
             }
         }
+        public static void WriteReverse(List<String> List)
+        {
+            try
+            {
+                
+                StreamWriter swR = new StreamWriter("new.txt");
+                for (int i = List.Count-1; i >= 0; i--)
+                {
+                    swR.WriteLine(List[i]);
+                }
+                swR.Close();
+            }
+            catch
+            {
+                Console.WriteLine("Failed to write!");
+            }
+        }
+        public static void ReadReverse()
+        {
+            try
+            {
+                StreamReader srR = new StreamReader("new.txt");
+                String line = srR.ReadLine();
+
+                while (line != null)
+                {
+                    Console.WriteLine(line);
+                    line = srR.ReadLine();
+                }
+
+                srR.Close();
+            }
+            catch
+            {
+                Console.WriteLine("Failed to Read!");
+            }
+        }
     }
 }
