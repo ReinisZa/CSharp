@@ -14,7 +14,7 @@ namespace Day08FileIO
                 StreamReader sr = new StreamReader(name);
                 String line = sr.ReadLine();
 
-                while(line == null)
+                while(line != null)
                 {
                     Console.WriteLine(line);
                     line = sr.ReadLine();
@@ -27,13 +27,15 @@ namespace Day08FileIO
                 Console.WriteLine("Failed to write!");
             }
         }
-        public static void Write(String name)
+        public static void Write(List <String> List, String name)
         {
             try
-            {
+            { 
                 StreamWriter sw = new StreamWriter(name);
-                sw.WriteLine("Hello ");
-                sw.WriteLine("World!");
+                for (int i = 0; i < List.Count; i++)
+                {
+                    sw.WriteLine(List[i]);
+                }
 
                 sw.Close();
             }
